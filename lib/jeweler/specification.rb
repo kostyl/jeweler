@@ -64,10 +64,10 @@ class Jeweler
         end
 
         if blank?(extra_rdoc_files)
-          self.extra_rdoc_files = FileList['README*', 'ChangeLog*', 'LICENSE*', 'TODO']
+          self.extra_rdoc_files = FileList[base_dir + '/README*', base_dir + '/ChangeLog*', base_dir + '/LICENSE*', base_dir + '/TODO']
         end
 
-        if File.exist?('Gemfile')
+        if File.exist?(base_dir + '/Gemfile')
           require 'bundler'
           bundler = Bundler.load
           bundler.dependencies_for(:default, :runtime).each do |dependency|

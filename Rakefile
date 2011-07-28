@@ -17,7 +17,7 @@ require 'rake'
 require 'jeweler'
 
 Jeweler::Tasks.new do |gem|
-  gem.name = "jeweler"
+  gem.name = "jeweler-k"
   gem.version = Jeweler::Version::STRING
   gem.homepage = "http://github.com/technicalpickles/jeweler"
   gem.summary = "Opinionated tool for creating and managing RubyGem projects"
